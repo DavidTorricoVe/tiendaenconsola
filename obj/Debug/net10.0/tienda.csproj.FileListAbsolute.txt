@@ -1,0 +1,14 @@
+/Users/davidtorrico/Desktop/progra2/c#/tienda/obj/Debug/net10.0/tienda.GeneratedMSBuildEditorConfig.editorconfig
+/Users/davidtorrico/Desktop/progra2/c#/tienda/obj/Debug/net10.0/tienda.AssemblyInfoInputs.cache
+/Users/davidtorrico/Desktop/progra2/c#/tienda/obj/Debug/net10.0/tienda.AssemblyInfo.cs
+/Users/davidtorrico/Desktop/progra2/c#/tienda/obj/Debug/net10.0/tienda.csproj.CoreCompileInputs.cache
+/Users/davidtorrico/Desktop/progra2/c#/tienda/bin/Debug/net10.0/tienda
+/Users/davidtorrico/Desktop/progra2/c#/tienda/bin/Debug/net10.0/tienda.deps.json
+/Users/davidtorrico/Desktop/progra2/c#/tienda/bin/Debug/net10.0/tienda.runtimeconfig.json
+/Users/davidtorrico/Desktop/progra2/c#/tienda/bin/Debug/net10.0/tienda.dll
+/Users/davidtorrico/Desktop/progra2/c#/tienda/bin/Debug/net10.0/tienda.pdb
+/Users/davidtorrico/Desktop/progra2/c#/tienda/obj/Debug/net10.0/tienda.dll
+/Users/davidtorrico/Desktop/progra2/c#/tienda/obj/Debug/net10.0/refint/tienda.dll
+/Users/davidtorrico/Desktop/progra2/c#/tienda/obj/Debug/net10.0/tienda.pdb
+/Users/davidtorrico/Desktop/progra2/c#/tienda/obj/Debug/net10.0/tienda.genruntimeconfig.cache
+/Users/davidtorrico/Desktop/progra2/c#/tienda/obj/Debug/net10.0/ref/tienda.dll
