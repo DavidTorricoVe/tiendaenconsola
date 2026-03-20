@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/davidtorrico/Desktop/progra2/c#/tienda/tienda.csproj",
+      "projectUniqueName": "/Users/davidtorrico/Desktop/progra2/c#/copia test/tienda.csproj",
       "projectName": "tienda",
-      "projectPath": "/Users/davidtorrico/Desktop/progra2/c#/tienda/tienda.csproj",
+      "projectPath": "/Users/davidtorrico/Desktop/progra2/c#/copia test/tienda.csproj",
       "packagesPath": "/Users/davidtorrico/.nuget/packages/",
-      "outputPath": "/Users/davidtorrico/Desktop/progra2/c#/tienda/obj/",
+      "outputPath": "/Users/davidtorrico/Desktop/progra2/c#/copia test/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/davidtorrico/.nuget/NuGet/NuGet.Config"
