@@ -72,4 +72,4 @@ namespace Tiendaconsola
             return false;
         }
     }
-}
+}git push -u origin main -f
