@@ -2,6 +2,7 @@ namespace Tiendaconsola
 {
     public class menuprincipal
     {
+        private int numerodecompra = 1;
         private gestorusuarios gestor = new gestorusuarios();
         private inventario inv = new inventario();
         private carrito car = new carrito();
@@ -10,7 +11,10 @@ namespace Tiendaconsola
 
         public menuprincipal()
         {
-            inv.agregarproducto(new producto("TEC01", "Teclado", 150.50));
+            inv.agregarproducto(new producto("TEC01", "Teclado Mecanico", 150.50));
+            inv.agregarproducto(new producto("MOU02", "Mouse Gamer", 85.00));
+            inv.agregarproducto(new producto("MON03", "Monitor 24 pulgadas", 1200.00));
+            inv.agregarproducto(new producto("AUR04", "Auriculares Inalambricos", 350.00));
         }
 
         public void iniciar()
@@ -34,7 +38,7 @@ namespace Tiendaconsola
             usuarioactual = null;
             while (usuarioactual == null)
             {
-                Console.WriteLine(" LOGIN ");
+                Console.WriteLine("\n LOGIN ");
                 Console.Write("Usuario: ");
                 string usr = Console.ReadLine();
                 Console.Write("Password: ");
@@ -54,7 +58,7 @@ namespace Tiendaconsola
             bool sesion = true;
             while (sesion)
             {
-                Console.WriteLine("\n--- PANEL ADMIN ---");
+                Console.WriteLine(" PANEL ADMIN");
                 Console.WriteLine("1. Listar productos");
                 Console.WriteLine("2. Agregar producto");
                 Console.WriteLine("3. Actualizar producto");
@@ -86,10 +90,11 @@ namespace Tiendaconsola
             bool sesion = true;
             while (sesion)
             {
-                Console.WriteLine("\n--- TIENDA CLIENTE ---");
+                Console.WriteLine(" TIENDA LACCANAZO");
                 Console.WriteLine("1. Ver productos disponibles");
                 Console.WriteLine("2. Agregar al carrito (Comprar)");
                 Console.WriteLine("3. Ver mi carrito");
+                Console.WriteLine("4. Pagar y finalizar compra");
                 Console.WriteLine("9. Cerrar Sesion (Volver al login)");
                 Console.WriteLine("0. Cerrar Tienda (Salir de la app)");
                 Console.Write("Opcion: ");
@@ -98,6 +103,7 @@ namespace Tiendaconsola
                 if (op == "1") vista.mostrarstock(inv);
                 else if (op == "2") comprar();
                 else if (op == "3") vista.mostrarcompra(car);
+                else if (op == "4") pagar();
                 else if (op == "9") sesion = false;
                 else if (op == "0") Environment.Exit(0);
             }
@@ -105,8 +111,9 @@ namespace Tiendaconsola
 
         private void comprar()
         {
-            Console.Write("Ingrese el numero (indice) del producto a comprar: ");
+            Console.Write("Ingrese el numero del producto a comprar: ");
             int pos = Convert.ToInt32(Console.ReadLine());
+            
             if(pos >= 0 && pos < inv.stockdeproductos()) 
             {
                 car.agregaralcarrito(inv.getproducto(pos));
@@ -117,7 +124,20 @@ namespace Tiendaconsola
                 Console.WriteLine("Indice invalido."); 
             }
         }
-
+    private void pagar()
+        {
+            if (car.cantidaddeproductos() == 0)
+            {
+                Console.WriteLine("El carrito esta vacio.");
+                return;
+            }
+            
+            compra nuevacompra = new compra(numerodecompra, usuarioactual, car);
+            Console.WriteLine($"Compra realizada con exito. Total pagado: ${nuevacompra.gettotal()}");
+            
+            car.vaciar();
+            numerodecompra++;
+        }
         private void crearproducto() 
         {
             Console.Write("Codigo: "); 
@@ -166,7 +186,7 @@ namespace Tiendaconsola
 
         private void listarusers() 
         {
-            Console.WriteLine("\n--- USUARIOS ---");
+            Console.WriteLine("USUARIOS");
             for(int i = 0; i < gestor.cantidadusuarios(); i++) 
             {
                 Console.WriteLine($"- {gestor.getusuario(i).getusername()} ({gestor.getusuario(i).getrol().getnombre()})");

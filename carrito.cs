@@ -1,4 +1,4 @@
-namespace Tiendaconsola 
+namespace Tiendaconsola
 {
     public class carrito
     {
@@ -16,24 +16,17 @@ namespace Tiendaconsola
 
         public double mostrartotal()
         {
-            double suma = 0;
-            
+            double total = 0;
             for (int i = 0; i < cantidad; i++)
             {
-                suma += productos[i].getprecio();
+                total += productos[i].getprecio();
             }
-            
-            return suma;
+            return total;
         }
 
-        public int cantidaddeproductos()
-        {
-            return cantidad;
-        }
+        public int cantidaddeproductos() { return cantidad; }
+        public producto getproducto(int posicion) { return productos[posicion]; }
 
-        public producto getproducto(int posicion)
-        {
-            return productos[posicion];
-        }
+        public void vaciar() { cantidad = 0; }
     }
 }
